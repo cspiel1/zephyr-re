@@ -344,6 +344,3 @@ zephyr_library_sources(
 
 )
 
-#include_directories(${ZEPHYR_BASE}/include)
-#include_directories(${ZEPHYR_BASE}/include/zephyr/posix)
-
