@@ -1,0 +1,5 @@
+
+[submodule "re"]
+	path = lib
+	url = https://github.com/cspiel1/re.git
+	branch = zephyr
