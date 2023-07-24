@@ -50,15 +50,11 @@ list(APPEND RE_DEFINITIONS
   )
 
 list(APPEND RE_DEFINITIONS
-  -DHAVE_PWD_H
-  -DHAVE_ROUTE_LIST
   -DHAVE_STRERROR_R
   -DHAVE_STRINGS_H
   -DHAVE_SYS_TIME_H
   -DHAVE_SELECT_H
   )
-
-list(APPEND RE_DEFINITIONS -DHAVE_GETIFADDRS)
 
 list(APPEND RE_DEFINITIONS
    -DUSE_MBEDTLS
@@ -179,6 +175,7 @@ zephyr_library_sources(
   lib/src/net/rt.c
   lib/src/net/sock.c
   lib/src/net/sockopt.c
+  lib/src/net/zephyr/zif.c
 
   lib/src/odict/entry.c
   lib/src/odict/get.c
