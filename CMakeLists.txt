@@ -231,7 +231,7 @@ zephyr_library_sources(
 
   lib/src/sys/daemon.c
   lib/src/sys/endian.c
-  lib/src/sys/fs.c
+  lib/src/sys/nofs.c
   lib/src/sys/rand.c
   lib/src/sys/sleep.c
   lib/src/sys/sys.c
