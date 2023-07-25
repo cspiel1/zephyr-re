@@ -30,13 +30,14 @@ if(HAVE_RESOLV)
   list(APPEND RE_DEFINITIONS -DHAVE_RESOLV)
 endif()
 
-#check_function_exists(accept4 HAVE_ACCEPT4)
-#if(HAVE_ACCEPT4)
-#  list(APPEND RE_DEFINITIONS -DHAVE_ACCEPT4)
+
+#check_function_exists(thrd_create HAVE_THREADS)
+#if(HAVE_THREADS)
+#  list(APPEND RE_DEFINITIONS -DHAVE_THREADS)
 #endif()
 
-#list(APPEND RE_DEFINITIONS -DHAVE_PTHREAD)
-#set(HAVE_PTHREAD ON)
+list(APPEND RE_DEFINITIONS -DHAVE_PTHREAD)
+set(HAVE_PTHREAD ON)
 
 check_symbol_exists(epoll_create "sys/epoll.h" HAVE_EPOLL)
 if(HAVE_EPOLL)
@@ -338,6 +339,5 @@ zephyr_library_sources(
   lib/src/crc32/crc32.c
 
   lib/src/thread/posix.c
-
 )
 
